@@ -50,6 +50,27 @@ a {
   clear: both;
 }
 
+.textAlignRight {
+  text-align: right;
+}
+
+.blogHeading {
+  font-weight: bold;
+  padding: 1em;
+  color: white;
+  background: black;
+  display: inline-block;
+  .date {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 66%;
+    vertical-align: middle;
+  }
+}
+.separatorTop {
+  border-top: 1px solid rgb(200,200,200);
+}
+
 //Layout
 
 header {
@@ -82,6 +103,12 @@ header {
   padding: 0;
   line-height: 0;
   vertical-align: top;
+  .photoHeading {
+    font-size: 3em;
+    position: absolute;
+    bottom: 33%;
+    right: 5%;
+  }
   img {
     width: 100%;
   }
@@ -161,12 +188,27 @@ header {
   max-width: 960px; //prev 1024
   margin: 0 auto;
   padding: 0 5%;
+  img {
+    width: 100%;
+    margin: 0 auto 2em;
+    display: block;
+  }
+  .caption {
+    // display: block;
+  }
 }
 
 section {
   margin: 4.25em 0;
-  &#intro {
+  &#intro,
+  &#about {
     margin: 2.25em 0 3em;
+  }
+  &#about {
+    background: rgba(0,0,0,0.05);
+    padding: 1.5em 0 0.05em;
+    margin: 0;
+    font-style: italic;
   }
   &#contact {
     margin: 2.25em 0 4.25em;
@@ -237,7 +279,7 @@ section {
 
 footer {
   border-top: 1px solid rgb(200,200,200);
-  margin: 2em 0 2.5em;
+  margin: 0 0 2.5em;
   padding: 2em 1.8em 1em;
   text-align: center;
   p {
@@ -382,6 +424,21 @@ footer {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 533px) {
+  .blogHeading .date {
+    display: block !important;
+  }
+  .noPaddingXMobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #about {
+    p {
+      padding-left: 5%;
+      padding-right: 5%;
+      margin: 0 0.5em;
+    padding-bottom: 1.5em;
+    }
+  }
   header {
     .callout {
       // height: 210px;
@@ -439,6 +496,21 @@ footer {
 }
 
 @media only screen and (max-width: 320px) {
+  .noPaddingXMobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #about {
+    p {
+      padding-left: 5%;
+      padding-right: 5%;
+      margin: 0 0.5em;
+    padding-bottom: 1.5em;
+    }
+  }
+  .blogHeading .date {
+    display: block !important;
+  }
   .metaHeading {
     font-size: 3em;
   }
@@ -454,6 +526,7 @@ footer {
   section {
     margin: 2.25em 0;
     &#intro,
+    &#about,
     &#labs {
       margin: 2.25em 0 0;
     }
