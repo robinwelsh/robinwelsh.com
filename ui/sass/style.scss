@@ -168,22 +168,6 @@ header {
   }
 }
 
-.metaHeading {
-  @include headerFontSetup;
-  font-size: 8em;
-  font-weight: 100;
-  text-align: center;
-  margin: 0.33em auto;
-  padding: 0.5em 5%;
-  color: rgba(255,255,255,0.8);
-  background: url(../photo/music/jamesBlakeBokeh2.jpg) center no-repeat;
-  max-width: 1024px;
-  span {
-    font-size: 0.25em;
-    vertical-align: middle;
-  }
-}
-
 .innerContent {
   max-width: 960px; //prev 1024
   margin: 0 auto;
@@ -213,70 +197,9 @@ section {
       margin-bottom: 0;
     }
   }
-  &#contact {
-    margin: 2.25em 0 4.25em;
-  }
-  &#labs {
-    margin: 4.25em 0 2.25em;
-  }
   p {
     margin: 0 1.5em 1.8em;
     font-size: 1.2em;
-  }
-  h2 {
-    @include headerFontSetup;
-    font-weight: 100;
-    font-size: 1.5em;
-    line-height: 1.33em;
-    text-align: center;
-    color: white;
-    padding: 1.2em 3.2em;
-    margin: 0 0 1.2em;
-    background: $accent;
-  }
-  &#labs h2 {
-    background: $orangeAccent;
-  }
-  .hero {
-    img {
-      width: 100%;
-      margin:0 0 2em;
-      border: 0;
-    }
-    &.last img {
-      margin: 0 0 1em;
-    }
-  }
-  &#showcase.xboxOne {
-    .banner {
-      background: $xboxGreen;
-      font-size: 6em;
-      margin: 0.5em 0 0.25em;
-      padding: 0;
-      line-height: 0.5em;
-      img {
-        margin: 0.33em;
-      }
-    }
-  }
-  &#clients {
-    text-align: center;
-    ul {
-      margin: 0 auto;
-      max-width: 900px;
-      li {
-        font-size: 1.2em;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 1em 1.5em;
-      }
-    }
-  }
-  &#contact {
-    .content {
-      width: 100%; //prev 90
-      margin: 0 auto;
-    }
   }
 }
 
@@ -441,49 +364,9 @@ footer {
       margin: 0 0.5em;
     }
   }
-  header {
-    .callout {
-      // height: 210px;
-    }
-    nav {
-      margin: 1.2em auto 0.5em;
-      font-size: 1.5em;
-      ul {
-        margin: 0 auto;
-        li {
-          a {
-            padding: 0.6em;
-            margin: 0 0.2em 0.94em;
-          }
-        }
-      }
-    }
-  }
-  .metaHeading {
-    font-size: 3em;
-  }
   section {
     p {
       margin: 0 0.5em 1.8em;
-    }
-    .hero {
-      &.last img {
-        margin: 0 0 0.8em;
-      }
-    }
-    &#showcase.xboxOne {
-      .banner {
-        img {
-          width: 66%;
-          height: auto;
-        }
-      }
-    }
-    &#contact {
-      .content {
-        width: 100%;
-        margin: 0 auto;
-      }
     }
   }
   footer {
@@ -516,9 +399,6 @@ footer {
   .blogHeading .date {
     display: block !important;
   }
-  .metaHeading {
-    font-size: 3em;
-  }
   .photoHero {
     width: 100%;
     float: none;
@@ -531,24 +411,8 @@ footer {
   section {
     margin: 2.25em 0;
     &#intro,
-    &#about,
-    &#labs {
+    &#about {
       margin: 2.25em 0 0;
-    }
-    &#contact {
-      margin: 2.25em 0 3em;
-    }
-    h2 {
-      padding: 1.2em 1.5em;
-    }
-    &#showcase.xboxOne {
-      .banner {
-        font-size: 3em;
-        img {
-          width: 66%;
-          height: auto;
-        }
-      }
     }
   }
   .hideForMobile {
