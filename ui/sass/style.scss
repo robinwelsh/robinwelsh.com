@@ -319,20 +319,29 @@ footer {
 }
 
 //Breakpoints
+//Variables
 
-@media only screen and (min-width: 768px) {
+$iPadPortrait: 768px;
+$iPadLandscape: 1024px;
+$iPhonePortrait: 320px;
+$iPhoneLandscape: 533px;
+
+//Breakpoints
+//Layout - Tablet
+
+@media only screen and (min-width: $iPadPortrait) {
   header {
     position: fixed;
   }
 }
 
-@media only screen and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-width: $iPadLandscape) and (orientation: landscape) {
   header {
     position: absolute;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-width: $iPadPortrait) and (max-width: $iPadLandscape) and (orientation: portrait) {
   header {
     nav {
       ul {
@@ -353,7 +362,10 @@ footer {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 533px) {
+//Breakpoints
+//Layout - Phone
+
+@media only screen and (min-width: $iPhonePortrait) and (max-width: $iPhoneLandscape) {
   .blogHeading .date {
     display: block !important;
   }
@@ -388,7 +400,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: $iPhonePortrait) {
   .noPaddingXMobile {
     padding-left: 0;
     padding-right: 0;
