@@ -326,22 +326,27 @@ $iPadLandscape: 1024px;
 $iPhonePortrait: 320px;
 $iPhoneLandscape: 533px;
 
+$tabletMediumPortrait: $iPadPortrait;
+$tabletMediumLandscape: $iPadLandscape;
+$phoneSmallPortrait: $iPhonePortrait;
+$phoneSmallLandscape: $iPhoneLandscape;
+
 //Breakpoints
 //Layout - Tablet
 
-@media only screen and (min-width: $iPadPortrait) {
+@media only screen and (min-width: $tabletMediumPortrait) {
   header {
     position: fixed;
   }
 }
 
-@media only screen and (max-width: $iPadLandscape) and (orientation: landscape) {
+@media only screen and (max-width: $tabletMediumLandscape) and (orientation: landscape) {
   header {
     position: absolute;
   }
 }
 
-@media only screen and (min-width: $iPadPortrait) and (max-width: $iPadLandscape) and (orientation: portrait) {
+@media only screen and (min-width: $tabletMediumPortrait) and (max-width: $tabletMediumLandscape) and (orientation: portrait) {
   header {
     nav {
       ul {
@@ -365,7 +370,7 @@ $iPhoneLandscape: 533px;
 //Breakpoints
 //Layout - Phone
 
-@media only screen and (min-width: $iPhonePortrait) and (max-width: $iPhoneLandscape) {
+@media only screen and (min-width: $phoneSmallPortrait) and (max-width: $phoneSmallLandscape) {
   .blogHeading .date {
     display: block !important;
   }
@@ -400,7 +405,7 @@ $iPhoneLandscape: 533px;
   }
 }
 
-@media only screen and (max-width: $iPhonePortrait) {
+@media only screen and (max-width: $phoneSmallPortrait) {
   .noPaddingXMobile {
     padding-left: 0;
     padding-right: 0;
