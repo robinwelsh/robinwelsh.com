@@ -1,7 +1,8 @@
 //Global
 
 @mixin headerFontSetup {
-  font-family: "Helvetica Neue Light", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-variant: Light;
 }
 
 @mixin calloutFont {
