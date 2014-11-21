@@ -178,9 +178,6 @@ header {
     margin: 0 auto 2em;
     display: block;
   }
-  .caption {
-    // display: block;
-  }
 }
 
 section {
@@ -227,6 +224,27 @@ footer {
       background-repeat: no-repeat;
       color: white;
       text-indent:-9999px;
+      &.flickr {
+        background-color: $flickr;
+        background-image: url(img/flickr.png);
+        &:hover {
+          background-color: lighten($flickr, 5%);
+        }
+      }
+      &.github {
+        background-color: $github;
+        background-image: url(img/github.png);
+        &:hover {
+          background-color: lighten($github, 20%);
+        }
+      }
+      &.instagram {
+        background-color: $instagram;
+        background-image: url(img/instagram.png);
+        &:hover {
+          background-color: lighten($instagram, 20%);
+        }
+      }
       &.linkedin {
         background-color: $linkedin;
         background-image: url(img/linkedin.png);
@@ -239,55 +257,6 @@ footer {
         background-image: url(img/twitter.png);
         &:hover {
           background-color: lighten($twitter, 20%);
-        }
-      }
-      &.google {
-        background-color: $google;
-        background-image: url(img/google.png);
-        &:hover {
-          background-color: lighten($google, 20%);
-        }
-      }
-      &.facebook {
-        background-color: $facebook;
-        background-image: url(img/facebook.png);
-        &:hover {
-          background-color: lighten($facebook, 20%);
-        }
-      }
-      &.pinterest {
-        background-color: $pinterest;
-        background-image: url(img/pinterest.png);
-        &:hover {
-          background-color: lighten($pinterest, 20%);
-        }
-      }
-      &.lastfm {
-        background-color: $lastfm;
-        background-image: url(img/lastfm.png);
-        &:hover {
-          background-color: lighten($lastfm, 20%);
-        }
-      }
-      &.github {
-        background-color: $github;
-        background-image: url(img/github.png);
-        &:hover {
-          background-color: lighten($github, 20%);
-        }
-      }
-      &.flickr {
-        background-color: $flickr;
-        background-image: url(img/flickr.png);
-        &:hover {
-          background-color: lighten($flickr, 5%);
-        }
-      }
-      &.instagram {
-        background-color: $instagram;
-        background-image: url(img/instagram.png);
-        &:hover {
-          background-color: lighten($instagram, 20%);
         }
       }
     }
@@ -341,7 +310,7 @@ $phoneSmallLandscape: $iPhoneLandscape;
   }
 }
 
-@media only screen and (max-width: $tabletMediumLandscape) and (orientation: landscape) {
+@media only screen and (max-width: $tabletMediumLandscape) {
   header {
     position: absolute;
   }
