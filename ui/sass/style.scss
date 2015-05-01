@@ -273,10 +273,15 @@ footer {
 }
 
 .subfooter.copyright {
-  display:inline-block;
+  
   margin-bottom: 0.5em;
-  padding-bottom:0.66em;
-  border-bottom: 1px solid rgb(200,200,200);
+
+  // separator
+  //
+  //display:inline-block;
+  //padding-bottom:0.66em;
+  //border-bottom: 1px solid rgb(200,200,200);
+
 }
 
 //Error
