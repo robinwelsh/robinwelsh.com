@@ -8,6 +8,13 @@
     <link href="ui/style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="ui/js/picturefill.js"></script>
     <script type="text/javascript" src="ui/js/responsiveImg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="ui/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".responsiveVideo").fitVids();
+      });
+</script>
 </head>
 <body id="home">
     <header>
@@ -20,6 +27,9 @@
             </span>
         </div>
     </header>
+            <div class="responsiveVideo">
+                <iframe src="https://player.vimeo.com/video/124168749?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
     <div id="top" class="photoHero">
         <script>responsiveImg(this,'photo/snowboard/yesOnClouds','snowboarding: above cloud cover at Mt Bachelor Summit');</script>
     </div>
@@ -143,7 +153,7 @@
                 Portfolio design and original artistic works &copy; 2015 Robin Welsh
             </p>
             <p class="subfooter hireasnowboarder">
-                <a href="http://is.gd/hireasnowboarder" target="_blank">#hireasnowboarder</a>
+                #hireasnowboarder on <a href="https://instagram.com/explore/tags/hireasnowboarder/" target="_blank">Instagram</a> &amp; <a href="http://is.gd/hireasnowboarder">Twitter</a>
             </p>
         </footer>
     </div>
