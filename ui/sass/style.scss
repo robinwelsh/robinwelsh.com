@@ -272,16 +272,10 @@ footer {
   }
 }
 
-.subfooter.copyright {
-  
-  margin-bottom: 0.5em;
-
-  // separator
-  //
-  //display:inline-block;
-  //padding-bottom:0.66em;
-  //border-bottom: 1px solid rgb(200,200,200);
-
+.subfooter {
+  p.copyright {
+    margin-bottom: 0.5em;
+  }
 }
 
 //Error
