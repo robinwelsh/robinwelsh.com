@@ -73,26 +73,24 @@ a {
 
 //Layout
 
-header {
+header a {
   @include headerFontSetup;
   position: absolute;
-  top: 0.66em;
-  left: 0.66em;
-  height: 5em;
-  width: 5em;
+  top: 0.33em;
+  left: 0.33em;
+  height: 2.1em;
+  width: 2.1em;
   opacity: 0.85;
   overflow: hidden;
   background: rgba(0,0,0,0.5);
   z-index: 100;
   border-radius: 100%;
-  .callout {
-    h1 {
-      @include calloutFont;
-      color: $headerH1;
-      position: absolute;
-      bottom: 0.525em;
-      left: 0.275em;
-    }
+  @include calloutFont;
+  color: $headerH1;
+  h1 {
+    position: absolute;
+    bottom: 0.525em;
+    left: 0.3em;
   }
 }
 
@@ -204,7 +202,7 @@ section {
       margin-bottom: 0;
     }
   }
-  p {
+  p, h2, h3, h4, h5, h6 {
     margin: 0 1.5em 1.8em;
     font-size: 1.2em;
   }
