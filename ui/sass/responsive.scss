@@ -1,0 +1,96 @@
+//Breakpoints
+//Variables
+
+$iPadPortrait: 768px;
+$iPadLandscape: 1024px;
+$iPhonePortrait: 320px;
+$iPhoneLandscape: 533px;
+
+$tabletMediumPortrait: $iPadPortrait;
+$tabletMediumLandscape: $iPadLandscape;
+$phoneSmallPortrait: $iPhonePortrait;
+$phoneSmallLandscape: $iPhoneLandscape;
+
+//Breakpoints
+//Layout - Tablet
+
+@media only screen and (min-width: $tabletMediumPortrait) {
+  // header { position: fixed; }
+}
+
+@media only screen and (max-width: $tabletMediumLandscape) {
+  // header { position: absolute; }
+}
+
+@media only screen and (min-width: $tabletMediumPortrait) and (max-width: $tabletMediumLandscape) and (orientation: portrait) {
+  // header nav ul li a { margin: 0 0.5em 1.88em; }
+  footer { padding: 2em 0 0.5em; }
+  .hideForTablet, .desktopOnly { display: none; }
+}
+
+//Breakpoints
+//Layout - Phone
+
+@media only screen and (min-width: $phoneSmallPortrait) and (max-width: $phoneSmallLandscape) {
+  .blogHeading .date { display: block !important; }
+  .noPaddingXMobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #about {
+    p {
+      padding-left: 5%;
+      padding-right: 5%;
+      margin: 0 0.5em;
+    }
+  }
+  section {
+    p { margin: 0 0.5em 1.8em; }
+  }
+  footer {
+    padding: 2em 0 0.5em;
+    .social {
+      .button {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  .subfooter {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+@media only screen and (max-width: $phoneSmallPortrait) {
+  .noPaddingXMobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #about {
+    p {
+      padding-left: 5%;
+      padding-right: 5%;
+      margin: 0 0.5em;
+    }
+  }
+  .blogHeading .date { display: block !important; }
+  .photoHero {
+    width: 100%;
+    float: none;
+    div, img {
+      width: 100% !important;
+      height: auto !important;
+      float: none !important;
+    }
+  }
+  section {
+    margin: 2.25em 0;
+    &#intro, &#about { margin: 2.25em 0 0; }
+  }
+  .hideForMobile { display: none; }
+  .subfooter {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}

@@ -4,8 +4,9 @@ $globalBG: rgb(255,255,255);
 $globalFontFG: rgb(50,50,50);
 $blueAccent: rgb(41,121,204);
 $orangeAccent: rgb(235,137,49);
-$xboxGreen: rgb(16,124,15);
 $headerH1: rgb(255,255,255);
+
+$accent: $blueAccent;
 
 //Social
 
@@ -21,6 +22,4 @@ $twitter: rgb(0,172,238);
 
 //Common
 
-.bgBlack {
-  background: black;
-}
+.bgBlack { background: black; }

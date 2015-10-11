@@ -1,17 +1,13 @@
 //Global
 
-@mixin headerFontSetup {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-variant: Light;
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,600);
+//@import url(https://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+
+@mixin bodyFontSetup {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
 }
 
 @mixin calloutFont {
   font-size: 2.4em;
-  font-weight: 100;
-}
-
-@mixin bodyFontSetup {
-  // font-family: "Gentium Book Basic", Georgia, serif;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
 }
