@@ -17,7 +17,36 @@ $desktop-small: 1100px;
 //Breakpoints
 //Layout - Tablet
 
+@media only screen and (max-width: $tablet-portrait-small) {
+  #top {
+      h2 {
+      font-size: 2.3em;
+    }
+  }
+}
+@media only screen and (max-width: $mobile-portrait-large) {
+  #top {
+      h2 {
+      font-size: 1.8em;
+    }
+  }
+}
 @media only screen and (max-width: $mobile-portrait-medium) {
+  #top {
+      h2 {
+      font-size: 1.6em;
+    }
+  }
+}
+@media only screen and (max-width: $mobile-portrait-small) {
+  #top {
+    h2 {
+      font-size: 1.266em;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-portrait-small) {
   header {
     font-size: 12px;
     a { padding: 1em 0.7em 1.1em 0.5em; }
@@ -26,11 +55,8 @@ $desktop-small: 1100px;
     margin-bottom: 1.333em;
     h2 {
       width: 80%;
-      font-size: 1.2em;
     }
-    img {
-      margin-top: 0;
-    }
+    img { margin-top: 0; }
   }
   .blogHeading .date { display: block; float: none; }
   section {
@@ -45,15 +71,14 @@ $desktop-small: 1100px;
   footer {
     text-align: center;
     margin-top: 1.33em;
+    padding-bottom: 0.33em;
     .social {
       .button {
         height: 38px;
         width: 38px;
         margin: 0 0.6em 0 0;
         background-size: 20px auto;
-        &:last-of-type {
-          margin: 0;
-        }
+        &:last-of-type { margin: 0; }
       }
     }
     p.copyright {
