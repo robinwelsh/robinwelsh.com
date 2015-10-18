@@ -1,96 +1,65 @@
 //Breakpoints
 //Variables
 
-$iPadPortrait: 768px;
-$iPadLandscape: 1024px;
-$iPhonePortrait: 320px;
-$iPhoneLandscape: 533px;
+$mobile-portrait-xsmall: 319px;
+$mobile-portrait-smaller: 349px;
+$mobile-portrait-small: 378px;
+$mobile-portrait-medium-small: 419px;
+$mobile-portrait-medium: 540px;
+$mobile-portrait-large: 590px;
 
-$tabletMediumPortrait: $iPadPortrait;
-$tabletMediumLandscape: $iPadLandscape;
-$phoneSmallPortrait: $iPhonePortrait;
-$phoneSmallLandscape: $iPhoneLandscape;
+$tablet-portrait-small: 670px;
+$tablet-portrait-medium: 890px;
+$tablet-portrait-large: 970px;
+
+$desktop-small: 1100px;
 
 //Breakpoints
 //Layout - Tablet
 
-@media only screen and (min-width: $tabletMediumPortrait) {
-  // header { position: fixed; }
-}
-
-@media only screen and (max-width: $tabletMediumLandscape) {
-  // header { position: absolute; }
-}
-
-@media only screen and (min-width: $tabletMediumPortrait) and (max-width: $tabletMediumLandscape) and (orientation: portrait) {
-  // header nav ul li a { margin: 0 0.5em 1.88em; }
-  footer { padding: 2em 0 0.5em; }
-  .hideForTablet, .desktopOnly { display: none; }
-}
-
-//Breakpoints
-//Layout - Phone
-
-@media only screen and (min-width: $phoneSmallPortrait) and (max-width: $phoneSmallLandscape) {
-  .blogHeading .date { display: block !important; }
-  .noPaddingXMobile {
-    padding-left: 0;
-    padding-right: 0;
+@media only screen and (max-width: $mobile-portrait-medium) {
+  header {
+    font-size: 12px;
+    a { padding: 1em 0.7em 1.1em 0.5em; }
   }
-  #about {
-    p {
-      padding-left: 5%;
-      padding-right: 5%;
-      margin: 0 0.5em;
+  #top {
+    margin-bottom: 1.333em;
+    h2 {
+      width: 80%;
+      font-size: 1.2em;
+    }
+    img {
+      margin-top: 0;
     }
   }
+  .blogHeading .date { display: block; float: none; }
   section {
-    p { margin: 0 0.5em 1.8em; }
+    &#intro {
+      margin-top: 1em;
+      .blogHeading { margin-top: 1.666em; }
+    }
+    p { font-size: 1.1em; }
   }
+  .innerContent { padding: 0 6.66%; }
+  .hideForTablet, .desktopOnly { display: none; }
   footer {
-    padding: 2em 0 0.5em;
+    text-align: center;
+    margin-top: 1.33em;
     .social {
       .button {
-        width: 60px;
-        height: 60px;
+        height: 38px;
+        width: 38px;
+        margin: 0 0.6em 0 0;
+        background-size: 20px auto;
+        &:last-of-type {
+          margin: 0;
+        }
       }
     }
-  }
-  .subfooter {
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-}
-
-@media only screen and (max-width: $phoneSmallPortrait) {
-  .noPaddingXMobile {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  #about {
-    p {
-      padding-left: 5%;
-      padding-right: 5%;
-      margin: 0 0.5em;
+    p.copyright {
+      display: block;
+      float: none;
+      padding: 0 0 1.33em 0;
     }
-  }
-  .blogHeading .date { display: block !important; }
-  .photoHero {
-    width: 100%;
-    float: none;
-    div, img {
-      width: 100% !important;
-      height: auto !important;
-      float: none !important;
-    }
-  }
-  section {
-    margin: 2.25em 0;
-    &#intro, &#about { margin: 2.25em 0 0; }
-  }
-  .hideForMobile { display: none; }
-  .subfooter {
-    padding-right: 10%;
-    padding-left: 10%;
   }
 }
