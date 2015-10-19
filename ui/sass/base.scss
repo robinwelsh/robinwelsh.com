@@ -72,6 +72,7 @@ header {
   font-weight: 500;
   color: lighten(black, 30%);
   cursor: default;
+  opacity: 0.9;
   a {
     color: lighten(black, 30%);
     display: inline-block;
@@ -260,6 +261,16 @@ footer {
     display: inline-block;
     float: right;
     padding: 1.6em 2em 0px 0px;
+  }
+}
+
+// Sub Designs 
+
+body.sub {
+  z-index: 0;
+  header { z-index: 100; }
+  &.photography {
+    #top { margin: 0; }
   }
 }
 
