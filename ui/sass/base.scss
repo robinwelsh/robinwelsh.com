@@ -266,11 +266,14 @@ footer {
 
 // Sub Designs 
 
-body.sub {
+body#sub {
   z-index: 0;
   header { z-index: 100; }
   &.photography {
     #top { margin: 0; }
+  }
+  footer {
+    margin-top: 0;
   }
 }
 
