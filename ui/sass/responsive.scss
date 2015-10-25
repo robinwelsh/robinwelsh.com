@@ -15,62 +15,65 @@ $tablet-portrait-large: 970px;
 $desktop-small: 1100px;
 
 //Breakpoints
-//Layout - Tablet
 
+@media only screen and (max-width: $tablet-portrait-large) {
+  #top { h2 { font-size: 2.8em; } }
+}
+@media only screen and (max-width: $tablet-portrait-medium) {
+  #top { h2 { font-size: 2.5em; } }
+}
 @media only screen and (max-width: $tablet-portrait-small) {
   #top {
       h2 {
+      margin-top: 12%;
       font-size: 2.3em;
     }
   }
 }
 @media only screen and (max-width: $mobile-portrait-large) {
-  #top {
-      h2 {
-      font-size: 1.8em;
-    }
-  }
+  #top { h2 { font-size: 1.8em; } }
 }
 @media only screen and (max-width: $mobile-portrait-medium) {
-  #top {
-      h2 {
-      font-size: 1.6em;
-    }
-  }
+  #top { h2 { font-size: 1.6em; } }
+}
+@media only screen and (max-width: $mobile-portrait-medium-small) {
+  #top { h2 { font-size: 1.35em; } }
 }
 @media only screen and (max-width: $mobile-portrait-small) {
-  #top {
-    h2 {
-      font-size: 1.266em;
-    }
-  }
+  #top { h2 { font-size: 1.266em; } }
 }
 
 @media only screen and (max-width: $tablet-portrait-small) {
   header {
     font-size: 12px;
-    a { padding: 1em 0.7em 1.1em 0.5em; }
+    a { padding: 1.1em 0.7em 1em 0.5em; }
   }
   #top {
-    margin-bottom: 1.333em;
-    h2 {
-      width: 80%;
-    }
+    h2 { width: 80%; }
     img { margin-top: 0; }
   }
-  .blogHeading .date { display: block; float: none; }
+  .basicHeading .date { display: block; float: none; }
   section {
-    &#intro {
-      margin-top: 1em;
-      .blogHeading { margin-top: 1.666em; }
+    &:first-of-type {
+      margin-top: 0em;
+      .basicHeading { margin-top: 0em; }
     }
     p { font-size: 1.1em; }
+  }
+  body#sub.design {
+    section:first-of-type {
+      margin-top: 4.25em;
+      margin-bottom: 0;
+    }
+    section {
+      margin: 2.25em 0;
+    }
   }
   .innerContent { padding: 0 6.66%; }
   .hideForTablet, .desktopOnly { display: none; }
   footer {
     text-align: center;
-    margin-top: 1.33em;
+    margin-top: 4em;
     padding-bottom: 0.33em;
     .social {
       .button {

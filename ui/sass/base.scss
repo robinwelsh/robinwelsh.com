@@ -38,7 +38,7 @@ a { color: $accent; }
 .clear { clear: both; }
 .textAlignRight { text-align: right; }
 
-.blogHeading {
+.basicHeading {
   font-weight: 600;
   display: block;
   width: 99%;
@@ -69,15 +69,16 @@ header {
   box-shadow: 0 1px 1px -1px #444;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
-  font-weight: 500;
   color: lighten(black, 30%);
   cursor: default;
   opacity: 0.9;
+  font-weight: 100;
   a {
+    font-weight: 500;
     color: lighten(black, 30%);
     display: inline-block;
     text-decoration: none;
-    padding: 1em 2.2em 1.1em 2em;
+    padding: 1.1em 2.2em 1em 2em;
     &:hover { color: $accent; }
     &.active {
       color: $accent;
@@ -87,9 +88,8 @@ header {
 
 #top {
   position: relative;
-  margin-bottom: 6em;
   text-align: center;
-  img {margin-top: -64px;}
+  img { margin-top: -64px; }
   div.copyWrap {
     position: absolute;
     top: 0;
@@ -181,26 +181,18 @@ video {
   max-width: 640px; //prev 960
   margin: 0 auto;
   padding: 0 5%;
-  img, video {
-    margin: 0 auto 2em;
-  }
 }
-
 section {
   margin: 4.25em 0;
-  &#intro,
-  &#about { margin: 2.25em 0 3em; }
-  &#about {
-    background: rgba(0,0,0,0.05);
-    padding: 1.8em 0 2em;
-    margin: 0;
-    font-style: italic;
-    p { margin-bottom: 0; }
-  }
+  &:first-of-type { margin: 2.25em 0 4.25em; }
   p, h2, h3, h4, h5, h6 {
     margin: 0 0 1.8em;
     font-size: 1.33em;
   }
+  img { width: 100%; }
+}
+img, video {
+  margin: 0 auto 2em;
 }
 
 footer {
@@ -271,9 +263,15 @@ body#sub {
   header { z-index: 100; }
   &.photography {
     #top { margin: 0; }
+    footer { margin-top: 0; }
+    img { margin: 0; }
   }
-  footer {
-    margin-top: 0;
+  &.design {
+    section {
+      &:first-of-type {
+        margin-top: 6.66em;
+      }
+    }
   }
 }
 
