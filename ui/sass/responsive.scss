@@ -17,78 +17,78 @@ $desktop-small: 1100px;
 //Breakpoints
 
 @media only screen and (max-width: $tablet-portrait-large) {
-  #top { h2 { font-size: 2.8em; } }
+	#top { h2 { font-size: 2.8em; } }
 }
 @media only screen and (max-width: $tablet-portrait-medium) {
-  #top { h2 { font-size: 2.5em; } }
+	#top { h2 { font-size: 2.5em; } }
 }
 @media only screen and (max-width: $tablet-portrait-small) {
-  #top {
-      h2 {
-      margin-top: 12%;
-      font-size: 2.3em;
-    }
-  }
+	#top {
+		h2 {
+			margin-top: 12%;
+			font-size: 2.3em;
+		}
+	}
 }
 @media only screen and (max-width: $mobile-portrait-large) {
-  #top { h2 { font-size: 1.8em; } }
+	#top { h2 { font-size: 1.8em; } }
 }
 @media only screen and (max-width: $mobile-portrait-medium) {
-  #top { h2 { font-size: 1.6em; } }
+	#top { h2 { font-size: 1.6em; } }
 }
 @media only screen and (max-width: $mobile-portrait-medium-small) {
-  #top { h2 { font-size: 1.35em; } }
+	#top { h2 { font-size: 1.35em; } }
 }
 @media only screen and (max-width: $mobile-portrait-small) {
-  #top { h2 { font-size: 1.266em; } }
+	#top { h2 { font-size: 1.266em; } }
 }
 
 @media only screen and (max-width: $tablet-portrait-small) {
-  header {
-    font-size: 12px;
-    a { padding: 1.1em 0.7em 1em 0.5em; }
-  }
-  #top {
-    h2 { width: 80%; }
-    img { margin-top: 0; }
-  }
-  .basicHeading .date { display: block; float: none; }
-  section {
-    &:first-of-type {
-      margin-top: 0em;
-      .basicHeading { margin-top: 0em; }
-    }
-    p { font-size: 1.1em; }
-  }
-  body#sub.design {
-    section:first-of-type {
-      margin-top: 4.25em;
-      margin-bottom: 0;
-    }
-    section {
-      margin: 2.25em 0;
-    }
-  }
-  .innerContent { padding: 0 6.66%; }
-  .hideForTablet, .desktopOnly { display: none; }
-  footer {
-    text-align: center;
-    margin-top: 4em;
-    padding-bottom: 0.33em;
-    .social {
-      .button {
-        height: 38px;
-        width: 38px;
-        margin: 0 0.6em 0 0;
-        background-size: 20px auto;
-        &:last-of-type { margin: 0; }
-      }
-    }
-    p.copyright {
-      display: block;
-      float: none;
-      padding: 0 0 1.33em 0;
-    }
-  }
-  body.photography #top { margin-bottom: 0 !important; }
+	header {
+		font-size: 12px;
+		a { padding: 1.1em 0.7em 1em 0.5em; }
+	}
+	#top {
+		h2 { width: 80%; }
+		img { margin-top: 0; }
+	}
+	.basicHeading .date { display: block; float: none; }
+	section {
+		&:first-of-type {
+			margin-top: 0em;
+			.basicHeading { margin-top: 0em; }
+		}
+		p { font-size: 1.1em; }
+	}
+	body#sub.design {
+		section:first-of-type {
+			margin-top: 4.25em;
+			margin-bottom: 0;
+		}
+		section {
+			margin: 2.25em 0;
+		}
+	}
+	.innerContent { padding: 0 6.66%; }
+	.hideForTablet, .desktopOnly { display: none; }
+	footer {
+		text-align: center;
+		margin-top: 4em;
+		padding-bottom: 0.33em;
+		.social {
+			.button {
+				height: 38px;
+				width: 38px;
+				margin: 0 0.6em 0 0;
+				background-size: 20px auto;
+				&:last-of-type { margin: 0; }
+			}
+		}
+		p.copyright {
+			display: block;
+			float: none;
+			padding: 0 0 1.33em 0;
+		}
+	}
+	body.photography #top { margin-bottom: 0 !important; }
 }
