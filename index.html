@@ -2,85 +2,92 @@
 <html>
 <head>
 	<title>Robin Welsh</title>
-	<meta name="Description" content="Snowboarder, environmentalist, designer, and photographer from Cascadia.">
+	<meta name="Description" content="Snowboarder, humanist, designer, writer, and photographer; founder and studio director of Anthropocene Games.">
 	<meta content="True" name="HandheldFriendly">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+
 	<base href="http://robinwelsh.com/">
+
 	<link href="ui/base.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="ui/js/picturefill.js"></script>
-	<script type="text/javascript" src="ui/js/responsiveImg.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="ui/js/jquery.fitvids.js"></script>
-	<script>
-		$(document).ready(function(){
-			$(".responsiveVideo").fitVids();
-		});
-	</script>-->
+	<script type="text/javascript" src="ui/js/imgSrcSet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<style type="text/css">
-		section img { box-shadow: 0 1px 2px -1px #666; }
-		.cols-2 { box-sizing: border-box; }
-		.cols-2 img {
-			display: inline-block;
-			width: 49%;
-			margin-right: 0.5%;
-			box-sizing: border-box;
-			margin-bottom: 0.5%;
-		}
-		@media only screen and (max-width: 420px) {
-			.cols-2 img {
-				display: block;
-				width: 100%;
-				margin-right: 0;
-				margin-bottom: 2em;
-				box-sizing: border-box;
-			}
-		}
+
 	</style>
 </head>
 <body id="home">
 	<header>
-		<a class="active" href="/">Robin Welsh</a>|
-		<a href="/design/">Design</a>|
-		<a href="/photo/">Photography</a>
+		<div id="navToggle">
+			<div class="navLine1"></div>
+			<div class="navLine2"></div>
+		</div>
+		<nav id="navMain" class="">
+			<a href="" class="current">Design</a>
+			<a href="photo/index.html">Photo</a>
+			<a href="articles/index.html">Articles</a>
+			<a href="contact/index.html">Contact</a>
+		</nav>
 	</header>
-	<div id="top" class="photoHero">
+	<div id="top" class="intro photoHero">
 		<script>
-			responsiveImg(this,'photo/snowboard/nwridge','snowboarding: Mt Bachelor looking northwest');
+			imgSrcSet(this,'photo/snowboard/nwridge','snowboarding: Mt Bachelor looking northwest');
 		</script>
-		<div class="copyWrap">
-			<h2>Robin Welsh is a snowboarder, environmentalist, designer, and photographer from Cascadia.</h2>
+		<div class="copy">
+			<h2>Robin Welsh</h2>
+			<h3>Snowboarder, humanist, designer, writer, and photographer; founder and studio director of Anthropocene&nbsp;Games.</h3>
 		</div>
 	</div>
-	<div class="innerContent">
-		<section>
-			<p><a href="/design/">Digital designer, front-end developer</a>, experience analyst, and <a href="/photo/">photographer</a> since 2004 &mdash; producing clean, efficient, and accessible user interfaces for mobile and desktop. Featured clients/projects include <a href="http://bendstudio.com/games/days-gone/" target="_blank">Days&nbsp;Gone</a> and <a href="http://bendstudio.com/games/syphon-filter-games/#x-content-band-5" target="_blank">Syphon Filter: Logan's Shadow</a> from critically acclaimed Sony PlayStation developer <a href="http://bendstudio.com/" target="_blank">Bend&nbsp;Studio</a>; Amazon.com, <a href="https://music.microsoft.com/explore?target=web" target="_blank">Groove&nbsp;Music</a>, <span style="white-space:nowrap;">T-Mobile</span>, Universal&nbsp;Music, and <a href="http://www.xbox.com/en-US/xbox-one" target="_blank">Xbox&nbsp;One</a>.</p>
-			<p>Proud supporter of <a href="https://www.yesnowboard.com/" target="_blank">YES</a>, <a href="https://www.now-snowboarding.com/" target="_blank">NOW</a>, <a href="https://www.teslamotors.com/" target="_blank">Tesla&nbsp;Motors</a>, <a href="https://www.spacex.com/" target="_blank">SpaceX</a>, <a href="https://www.solarcity.com/" target="_blank">SolarCity</a>, <a href="https://www.wedrinkwater.com" target="_blank">DRINK&nbsp;WATER</a>, and <a href="https://www.protectourwinters.org/" target="_blank">Protect&nbsp;Our&nbsp;Winters</a>.</p>
-			<p>Industry professionals may <a href="https://stackoverflow.com/story/robinwelsh" target="_blank">contact Robin via Stack Overflow Careers</a>.
-			<p class="basicHeading">
-				Recommended Reading
-			</p>
-			<div class="cols-2">
-				<a href="https://en.wikipedia.org/wiki/Descartes" target="_blank"><img src="img/descartes.jpg"></a><a href="https://en.wikipedia.org/wiki/Machiavelli" target="_blank"><img src="img/machiavelli.jpg"></a><a href="http://a.co/cMjKmlh" target="_blank"><img src="img/disrupted.jpg"></a><a href="http://a.co/3tYV5OO" target="_blank"><img src="img/unstoppable.jpg"></a>
+	<div class="designItem piTV first strip-silver bg-silver">
+		<div class="contentWrap">
+			<div class="artboards swap2">
+				<img class="front" src="design/img/piTV-appDrawer.jpg">
+				<img class="rear left" src="design/img/piTV-dashboard.jpg">
+				<img class="rear right" src="design/img/piTV-favesDrawer.jpg">
 			</div>
-		</section>
+			<h4 class="copy">
+				Focus on people.<br>
+				Design with empathy.<br>
+				Solve real problems.
+			</h4>
+		</div>
+	</div>
+	<div class="designItem newsApp strip-blue bg-silver">
+		<div class="contentWrap">
+			<div class="artboards rotate3">
+				<img class="first" src="design/img/news-001-dashboard.png">
+				<img class="second" src="design/img/news-003-dashboardItemDesc.png">
+				<img class="third" src="design/img/news-005-menuProfile.png">
+			</div>
+			<div class="copy">
+				<h4><strong>Independent R&amp;D</strong><br>
+				News &amp; Analytics</h4>
+				<p>Professional data feed aggregation and analytics application. Designed mobile first with Sketch and Mirror.</p>
+			</div>
+		</div>
+	</div>
+	<div class="designItem strip-charcoal bg-orange">
+		<div class="contentWrap">
+			
+		</div>
+	</div>
+	<div class="designItem strip-green bg-silver">
+		<div class="contentWrap">
+			
+		</div>
 	</div>
 	<footer>
-		<div class="innerContent">
-			<div class="social">
-				<a class="button github" href="https://github.com/robinwelsh" target="_blank">
-					GitHub
-				</a>
-				<a class="button instagram" href="https://instagram.com/robin_welsh" target="_blank">
-					<div>Instagram</div>
-				</a>
-				<a class="button twitter" href="https://twitter.com/robin_welsh" target="_blank">
-					Twitter
-				</a>
-			</div>
-			<p class="copyright">
-				&copy; 2017 Robin Welsh
-			</p>
+		<div class="social">
+			<a class="button github" href="https://github.com/robinwelsh" target="_blank">
+				GitHub
+			</a>
+			<a class="button instagram" href="https://instagram.com/robin_welsh" target="_blank">
+				<div>Instagram</div>
+			</a>
+			<a class="button twitter" href="https://twitter.com/robin_welsh" target="_blank">
+				Twitter
+			</a>
 		</div>
 	</footer>
+	<script type="text/javascript" src="ui/js/ui.js"></script>
 </body>
 </html>

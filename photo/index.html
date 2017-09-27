@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Robin Welsh: Photography</title>
-	<meta name="Description" content="Snowboarder, environmentalist, designer, and photographer from Cascadia.">
+	<title>Robin Welsh</title>
+	<meta name="Description" content="Snowboarder, humanist, designer, writer, and photographer; founder and studio director of Anthropocene Games.">
 	<meta content="True" name="HandheldFriendly">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+
 	<base href="http://robinwelsh.com/">
+
 	<link href="ui/base.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="ui/js/picturefill.js"></script>
-	<script type="text/javascript" src="ui/js/responsiveImg.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="ui/js/jquery.fitvids.js"></script>
-	<script>
-		  $(document).ready(function(){
-			$(".responsiveVideo").fitVids();
-		  });
-	</script>-->
+	<script type="text/javascript" src="ui/js/imgSrcSet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+
+	</style>
 </head>
-<body id="sub" class="photography">
+<body id="home">
 	<header>
-		<a href="/">Robin Welsh</a>|
-		<a href="/design/">Design</a>|
-		<a class="active" href="/photo/">Photography</a>
+		<div id="navToggle">
+			<div class="navLine1"></div>
+			<div class="navLine2"></div>
+		</div>
+		<nav id="navMain" class="">
+			<a href="">Design</a>
+			<a href="" class="current">Photo</a>
+			<a href="">Articles</a>
+			<a href="">Contact</a>
+		</nav>
 	</header>
-	<div id="top" class="photoHero">
-		<script>responsiveImg(this,'photo/snowboard/yesOnClouds','snowboarding: above cloud cover at Mt Bachelor Summit');</script>
+	<div id="top" class="intro photoHero">
+		<script>imgSrcSet(this,'photo/landscape/tamMacArthur','portrait: central oregon cascades from tam macarthur ridge');</script>
+		<div class="copy">
+			<h2>Robin Welsh</h2>
+			<h3>Snowboarder, humanist, designer, writer, and photographer; founder and studio director of Anthropocene&nbsp;Games.</h3>
+		</div>
+	</div>
+	<div class="photoHero">
+		<script>imgSrcSet(this,'photo/snowboard/yesOnClouds','snowboarding: above cloud cover at Mt Bachelor Summit');</script>
+	</div>
+	<div class="photoHero">
+		<script>imgSrcSet(this,'photo/nature/springGreens','');</script>
 	</div>
 	<div class="photoHero halfSplit">
 		<script>
-			responsiveImg(this,'photo/snowboard/mtBachelorHike1','snowboarding: Mt Bachelor Summit Hike 1');
-			responsiveImg(this,'photo/snowboard/mtBachelorHike2','snowboarding: Mt Bachelor Summit Hike 2');
+			imgSrcSet(this,'photo/snowboard/mtBachelorHike1','snowboarding: Mt Bachelor Summit Hike 1');
+			imgSrcSet(this,'photo/snowboard/mtBachelorHike2','snowboarding: Mt Bachelor Summit Hike 2');
+		</script>
+	</div>
+	<div class="photoHero halfSplit">
+		<script>
+			imgSrcSet(this,'photo/landscape/uqaAutumn','landscape: Upper Queen Anne in autumn');
+			imgSrcSet(this,'photo/landscape/winterBenchSnow','landscape: winter bench snow');
 		</script>
 	</div>
 	<div class="photoHero">
-		<script>responsiveImg(this,'photo/landscape/tamMacArthur','portrait: central oregon cascades from tam macarthur ridge');</script>
+		<script>imgSrcSet(this,'photo/portrait/lzTable','portrait: model LZ Photovision');</script>
 	</div>
 	<div class="photoHero halfSplit">
 		<script>
-			responsiveImg(this,'photo/landscape/uqaAutumn','landscape: Upper Queen Anne in autumn');
-			responsiveImg(this,'photo/landscape/winterBenchSnow','landscape: winter bench snow');
-		</script>
-	</div>
-	<div class="photoHero">
-		<script>responsiveImg(this,'photo/portrait/lzTable','portrait: model LZ Photovision');</script>
-	</div>
-	<div class="photoHero halfSplit">
-		<script>
-			responsiveImg(this,'photo/skate/redKickflip','skateboarding: red kickflip');
-			responsiveImg(this,'photo/skate/blueKickflip','skateboarding: blue kickflip');
+			imgSrcSet(this,'photo/skate/redKickflip','skateboarding: red kickflip');
+			imgSrcSet(this,'photo/skate/blueKickflip','skateboarding: blue kickflip');
 		</script>
 	</div><div class="photoHero">
-		<script>responsiveImg(this,'photo/landscape/snowmanViewpoint-filmCrop','landscape: photogenic snowman');</script>
+		<script>imgSrcSet(this,'photo/landscape/snowmanViewpoint-filmCrop','landscape: photogenic snowman');</script>
 	</div>
 	<div class="photoHero thirdSplit">
 		<script>
-			responsiveImg(this,'photo/nature/endOfLife','nature: end of life');
-			responsiveImg(this,'photo/urban/qaAlleySepia','landscape: upper queen anne alley');
-			responsiveImg(this,'photo/portrait/manyComfortable','very portrait: such lap many comfortable wow');
+			imgSrcSet(this,'photo/nature/endOfLife','nature: end of life');
+			imgSrcSet(this,'photo/urban/qaAlleySepia','landscape: upper queen anne alley');
+			imgSrcSet(this,'photo/portrait/manyComfortable','very portrait: such lap many comfortable wow');
 		</script>
 	</div>
 	<footer>
-		<div class="innerContent">
-			<div class="social">
-				<a class="button github" href="https://github.com/robinwelsh" target="_blank">
-					GitHub
-				</a>
-				<a class="button instagram" href="https://instagram.com/robin_welsh" target="_blank">
-					<div>Instagram</div>
-				</a>
-				<a class="button twitter" href="https://twitter.com/robin_welsh" target="_blank">
-					Twitter
-				</a>
-			</div>
-			<p class="copyright">
-				&copy; 2017 Robin Welsh
-			</p>
+		<div class="social">
+			<a class="button github" href="https://github.com/robinwelsh" target="_blank">
+				GitHub
+			</a>
+			<a class="button instagram" href="https://instagram.com/robin_welsh" target="_blank">
+				<div>Instagram</div>
+			</a>
+			<a class="button twitter" href="https://twitter.com/robin_welsh" target="_blank">
+				Twitter
+			</a>
 		</div>
 	</footer>
+	<script type="text/javascript" src="ui/js/ui.js"></script>
 </body>
 </html>
