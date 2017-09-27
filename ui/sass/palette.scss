@@ -2,24 +2,16 @@
 
 $globalBG: rgb(255,255,255);
 $globalFontFG: rgb(50,50,50);
-$blueAccent: rgb(41,121,204);
-$orangeAccent: rgb(235,137,49);
-$headerH1: rgb(255,255,255);
 
-$accent: $blueAccent;
+$accent: blue;
 
 //Social
 
-$facebook: rgb(59,89,152);
-$flickr: hsl(0,0,85);
 $github: rgb(65,131,196);
-$google: rgb(210,68,51);
 $instagram: desaturate(lighten(green,30%), 70%);
-$lastfm: rgb(215,17,2);
-$linkedin: rgb(35,135,189);
-$pinterest: rgb(175,24,31);
 $twitter: rgb(0,172,238);
 
-//Common
-
-.bgBlack { background: black; }
+.bg-silver {
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(210,210,210,1) 166%);
+}
+.bg-orange {background:orange;}
