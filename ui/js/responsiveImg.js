@@ -1,4 +1,3 @@
-// requires picturefill
 function imgSrcSet(output,name,alt) {
     var $srcSetOutput;
     	$srcSetOutput = '<img srcset="' + name + '-small.jpg 320w,';
