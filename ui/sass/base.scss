@@ -27,6 +27,8 @@ a { color: $accent; }
 .hide { display: none; }
 .clear { clear: both; }
 
+.text-shadow { text-shadow: 0 0 4px rgba(0,0,0,0.3); }
+
 //Layout
 
 header {
@@ -207,6 +209,7 @@ header {
 
 .designItem {
 	&.first { margin-top:-6%; }
+	overflow: hidden;
 	transform: skewY(-5deg);
 	&::before {
 		content:'';
@@ -223,6 +226,7 @@ header {
 	}
 	.artboards {
 		cursor: pointer;
+		&.single { cursor: default; }
 		position: relative;
 		img { box-shadow: 0 0 4px rgba(0,0,0,0.333333); }
 	}
@@ -266,15 +270,18 @@ header {
 			text-align: center;
 			margin: 0.66666em auto 0;
 			line-height: 120%;
+			color: white;
 		}
 	}
 	&.newsApp {
+		.contentWrap { height: 48.333333em; }
 		.artboards {
 			width: 50%;
 			max-width: 440px;
 			display: inline-block;
 			vertical-align: top;
 			img {
+				display: block; // broken?
 				transition-property: left, width, z-index, top;
 				transition-timing-function: ease-in;
 				transition-duration: 0.2s;
@@ -301,6 +308,81 @@ header {
 			padding-top: 8.8em;
 		}
 	}
+	&.xboxMusic {
+		&::before {
+			position: absolute;
+			top: 0;
+			z-index: 2;
+		}
+		.blurBG {
+			position: absolute;
+			height: 200%;
+			top: 0;
+			left: -50%;
+			filter: blur(32px);
+		}
+		.contentWrap { padding-top: 12em; }
+		.artboards {
+			img {
+				width: 100%;
+			}
+		}
+		.copy { color: white; }
+	}
+	&.xboxOne {
+		.artboards {
+			.front,
+			.rear {
+				transition: width, opacity, top, bottom, left, right;
+				transition-duration: 0.2s;
+				transition-timing-function: ease-in;
+			}
+			.front {
+				width: 100%;
+				opacity: 1;
+			}
+			.rear {
+				position: absolute;
+				width: 90%;
+				top: 5%;
+				right: -3%;
+				z-index:-1;
+				&.left { left: -32px; }
+				&.right { right: -32px; }
+			}
+			&.toggle {
+				.front {
+					opacity: 0;
+					top: -5%;
+					left: -5%;
+				}
+				.rear {
+					width: 100%;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+	&.xboxMusic,
+	&.xboxOne {
+		.copy {
+			margin: 4em auto 0;
+			h4 { margin: 0 0 0.66666em 0; }
+		}
+	}
+	&.newsApp,
+	&.xboxMusic,
+	&.xboxOne {
+		.copy {
+			p {
+				font-weight: 200;
+				margin-top: 2em;
+				font-size: 1.8em;
+				line-height: 125%;
+			}
+		}
+	}
 }
 
 .strip-silver {
@@ -310,7 +392,7 @@ header {
 }
 .strip-blue {
 	&::before {
-		background: radial-gradient(ellipse at center, #c6e0ff 20%,rgba(103,157,220,1) 166%);
+		background: radial-gradient(ellipse at center, #7bade7 20%, #4e92df 166%);
 	}
 }
 .strip-charcoal {
@@ -320,7 +402,7 @@ header {
 }
 .strip-green {
 	&::before {
-		background: radial-gradient(ellipse at center, #89f96a 13%, #54d130 133%);
+		background: radial-gradient(ellipse at center, #5edb31 13%, #31b602 133%);
 	}
 }
 
@@ -333,13 +415,15 @@ section {
 }
 
 footer {
-	height: 128px;
-	margin-top:-6%;
+	margin: -6% 0 0;
+	padding: 6% 5% 0.1%;
 	background: black;
 	background: radial-gradient(ellipse at center, rgba(42,132,189,1) 0%,rgba(45,80,116,1) 166%);
 	.social {
-		margin: 1em auto;
-		display: inline-block;
+		max-width: 1024px;
+		margin: 4em auto;
+		display: block;
+		text-align: right;
 		vertical-align: middle;
 		.button {
 			height: 48px;
@@ -352,22 +436,27 @@ footer {
 			background-repeat: no-repeat;
 			background-size: 26px auto;
 			color: white;
-			text-indent:-9999px;
+			text-indent: 200%;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    transition: background-color, 0.1s, linear;
+		    background-color: rgba(255,255,255,0.1);
+		    &:hover { background-color: rgba(255,255,255,0.2); }
 			&:last-of-type { margin-right: 0; }
 			&.github {
-				background-color: $github;
+				//background-color: $github;
 				background-image: url(img/github.png);
-				&:hover { background-color: lighten($github, 20%); }
+				//&:hover { background-color: lighten($github, 20%); }
 			}
 			&.instagram {
-				background-color: $instagram;
+				//background-color: $instagram;
 				background-image: url(img/instagram.png);
-				&:hover { background-color: lighten($instagram, 20%); }
+				//&:hover { background-color: lighten($instagram, 20%); }
 			}
 			&.twitter {
-				background-color: $twitter;
+				//background-color: $twitter;
 				background-image: url(img/twitter.png);
-				&:hover { background-color: lighten($twitter, 20%); }
+				//&:hover { background-color: lighten($twitter, 20%); }
 			}
 		}
 	}

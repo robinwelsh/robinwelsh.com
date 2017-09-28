@@ -10,7 +10,7 @@ $( "#navToggle" ).click(function() {
 		$("#navMain").show();
 		$("#navMain").toggleClass("shown");
 	};
- 	$( "#navToggle" ).toggleClass( "close" );
+ 	$( "#navToggle" ).toggleClass( "close" ); // bug - can be spammed
 });
 
 $( ".artboards.swap2" ).click(function() {
