@@ -12,4 +12,160 @@ $tablet-portrait-small: 670px;
 $tablet-portrait-medium: 890px;
 $tablet-portrait-large: 970px;
 
+$tablet-large-portraitX: 1024px;
+$tablet-large-portraitY: 1366px;
+$tablet-large-landscapeX: $tablet-large-portraitX;
+$tablet-large-landscapeY: $tablet-large-portraitY;
+
 $desktop-small: 1100px;
+$desktop-medium: 1400px;
+
+// Small Desktops
+
+@media only screen and (max-width: $desktop-medium) {
+	#top {
+		&.intro {
+			.copy h3 {
+				padding-left: 0.66em;
+			}
+		}
+	}
+	.designItem {
+		h4 { font-size: 2.8em; }
+		.copy {
+			p { font-size: 1.8em; }
+		}
+	}
+}
+@media only screen and (max-width: $desktop-small) {
+	#top {
+		&.photoHero img {
+			width: 125%;
+		}
+	}
+}
+
+// Large Tablet
+// Portrait
+
+@media only screen and (width: $tablet-large-portraitX) and (height: $tablet-large-portraitY) {
+	#top {
+		margin:0;
+		&.photoHero img {
+			width: 210%;
+			margin-left: -10%;
+		}
+		.copy {
+			h2 { font-size: 2em; }
+			h3 { font-size: 1.3em; }
+		}
+	}
+}
+
+// Large Tablet
+// Landscape
+
+@media only screen and (width: $tablet-large-landscapeX) and (height: $tablet-large-landscapeY) {
+	#top {
+		margin:0;
+		&.photoHero img {
+			width: 210%;
+			margin-left: -10%;
+		}
+		.copy {
+			h2 { font-size: 2em; }
+			h3 { font-size: 1.3em; }
+		}
+	}
+}
+
+// Tablets
+
+@media only screen and (max-width: $tablet-portrait-large) {
+	.designItem {
+		h4 {
+			font-size: 2.4em;
+		}
+		&.newsApp {
+			.copy {
+				padding-top: 10%;
+			}
+		}
+	}
+}
+@media only screen and (max-width: $tablet-portrait-medium) {
+	#top {
+		&.intro {
+			margin:0;
+			&.photoHero img {
+				width: 210%;
+				margin-left: -10%;
+			}
+			.copy {
+				h2 { font-size: 2em; }
+				h3 { font-size: 1.3em; }
+			}
+		}
+	}
+	.designItem {
+		h4 {
+			font-size: 2.4em;
+		}
+		&.newsApp {
+			.contentWrap {
+				height: 38.33333em;
+			}
+			h4 {
+				.long { display: none; }
+				.short { display: inline; }
+			}
+			.copy {
+				padding-top: 0;
+			}
+		}
+	}
+}
+@media only screen and (max-width: $tablet-portrait-small) {
+	
+}
+
+@media only screen and (max-width: $mobile-portrait-large) {
+
+}
+@media only screen and (max-width: $mobile-portrait-medium) {
+	#top {
+		&.intro {
+			&.photoHero img {
+				width: 280%;
+				margin-left: -10%;
+			}
+			.copy {
+				right: 32px;
+				top: 25%;
+				bottom: auto;
+				h2 { font-size: 1.6em; }
+				h3 { font-size: 1em; }
+			}
+		}
+	}
+	#navMain {
+		a { font-size: 2.66666em; }
+	}
+}
+@media only screen and (max-width: $mobile-portrait-medium-small) {
+	
+}
+@media only screen and (max-width: $mobile-portrait-small) {
+	#navMain {
+		a {
+			&:first-of-type { margin-top: 66.66666%; }
+		}
+	}
+	#top {
+		&.intro {
+			.copy {
+
+			}
+		}
+	}
+}

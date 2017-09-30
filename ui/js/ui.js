@@ -22,6 +22,6 @@ $( ".artboards.rotate3" ).click(function() {
 	var second = $( this ).children(".second");
 	var third = $( this ).children(".third");
 	first.removeClass("first").addClass("third");
-	second.removeClass("second").addClass("first")
+	second.removeClass("second").addClass("first");
 	third.removeClass("third").addClass("second");
 });
